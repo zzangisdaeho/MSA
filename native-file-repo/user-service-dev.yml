@@ -1,0 +1,6 @@
+token:
+  expiration_time: 86400000 #1day milisecond
+  secret: my_token_navtive_user-service
+
+gateway:
+  ip: 192.168.0.8

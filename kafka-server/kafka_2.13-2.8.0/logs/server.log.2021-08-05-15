@@ -1,0 +1,3 @@
+[2021-08-05 15:25:49,795] INFO [GroupCoordinator 0]: Preparing to rebalance group console-consumer-38833 in state PreparingRebalance with old generation 0 (__consumer_offsets-16) (reason: Adding new member consumer-console-consumer-38833-1-0d520132-d997-467b-9e77-69aa9535eb83 with group instance id None) (kafka.coordinator.group.GroupCoordinator)
+[2021-08-05 15:25:49,796] INFO [GroupCoordinator 0]: Stabilized group console-consumer-38833 generation 1 (__consumer_offsets-16) with 1 members (kafka.coordinator.group.GroupCoordinator)
+[2021-08-05 15:25:49,799] INFO [GroupCoordinator 0]: Assignment received from leader for group console-consumer-38833 for generation 1. The group has 1 members, 0 of which are static. (kafka.coordinator.group.GroupCoordinator)

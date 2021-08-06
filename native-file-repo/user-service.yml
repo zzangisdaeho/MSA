@@ -1,0 +1,17 @@
+token:
+  expiration_time: 86400000 #1day milisecond
+  secret: '{cipher}AQBEkQANKDUJ/YBt9AwgeN998Sf+8jYA+6GyiSX1cVkNuNVhzIk7dV+o5uRXZzRtzUBJtb4DuBI+GxSByRaFVsYpQc7fzNzzXR9bqBTcFOEo6ZCYzcoPgruWgZps1/UUUgEfFEyZCqpen6NxHnrOX+quxd96oYUvvuvCCQ664kkBHNn5BqRzL6E/z+XA9bkDEocWe0tpJ/PHKbG7xkHjOwlyRBKGzFZfSltaz8ybS8R6EZVNmVQEzf11Y9atv0Q2kd4IAdP9NQwjvml8AOi7+FOSykBBbGan3kh6LpaGj/MvSf0EMnRuCMUDjlRkHmfrkE41AVG0b4tCckn5PvEyN3lLXLBc+E/M+Ngh4r+F5IndqON53y8k/KmYT++zIu0soacjgnovYcRFC6endz4yUD1G'
+gateway:
+  ip: 192.168.0.8
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:user-service
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: '{cipher}AQAMCfgeeFyYKAvin/q0bXR4Tu6rm4fjDb1ahvgjNgICRj1aCF4i2FMKeXvtaDm8V1zlI9d+183lsYhBH80qRiPTFdkzB6KJMyHP2yq/QdTY2OnYuxk1rmPsd9VgLaEsz//m4neQsYwrdZVK7iZR2kcGJDb4NAUo9trArCLiO2QQOXaJ4qLkygZBo8TEucrLRxhtNvDjZNTWAQHECts7/BE0b8s1KB70NBQJ7g+jNau9eX1ArOxO7skEL9M8sDiRQg4QfZ+tc+nPfq3RxQKjUBs/UssUIphfQ+78WySGq7rP9cpkPawl3nGMijmE7TcA4DL6a5XkwUWx6T+FBYDagV3xA4qI5m0YkCcT3AnOjg2LvsIJhGIw55VPgNOxhLZH3C0='
+
+order_service: 
+  #url: http://127.0.0.1:8000/order-service/%s/orders
+  url: http://ORDER-SERVICE/order-service/%s/orders # ip주소 + port 대신 microservice application id
+  exception_orders_is_empty: User's Order is empty2

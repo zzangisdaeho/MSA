@@ -1,0 +1,4 @@
+[2021-08-05 11:02:43,916] INFO [GroupCoordinator 0]: Member[group.instance.id None, member.id connect-1-45393f72-91f3-458b-be11-892a71b18050] in group connect-cluster has left, removing it from the group (kafka.coordinator.group.GroupCoordinator)
+[2021-08-05 11:02:43,917] INFO [GroupCoordinator 0]: Preparing to rebalance group connect-cluster in state PreparingRebalance with old generation 1 (__consumer_offsets-13) (reason: removing member connect-1-45393f72-91f3-458b-be11-892a71b18050 on LeaveGroup) (kafka.coordinator.group.GroupCoordinator)
+[2021-08-05 11:02:43,917] INFO [GroupCoordinator 0]: Group connect-cluster with generation 2 is now empty (__consumer_offsets-13) (kafka.coordinator.group.GroupCoordinator)
+[2021-08-05 11:04:40,599] INFO [GroupMetadataManager brokerId=0] Group connect-cluster transitioned to Dead in generation 2 (kafka.coordinator.group.GroupMetadataManager)

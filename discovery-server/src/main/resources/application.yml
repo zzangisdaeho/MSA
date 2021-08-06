@@ -1,0 +1,14 @@
+server:
+  port: 8761
+
+#각각 마이크로서비스의 고유아이디 부여
+spring:
+  application:
+    name: discoveryservice
+
+#유레카 라이브러리가 포함된 채 스프링부트가 기동되면 기본적으로 유레카 클라이언트로써 등록하는 작업을 시도한다.
+#아래 설정값을 넣지않으면 default가 true이기 때문에 자신의 정보를 자신에게 등록하는 행위를 하는데 해당 행위를 하지 않도록 설정해준다.
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

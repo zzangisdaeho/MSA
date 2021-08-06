@@ -1,0 +1,912 @@
+[2021-08-05 21:59:40,954] INFO [Worker clientId=connect-1, groupId=connect-cluster] Group coordinator 192.168.155.45:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response.isDisconnected: false. Rediscovery will be attempted. (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:904)
+[2021-08-05 21:59:41,335] INFO [Worker clientId=connect-1, groupId=connect-cluster] Discovered group coordinator 192.168.155.45:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-08-05 21:59:41,335] INFO [Worker clientId=connect-1, groupId=connect-cluster] Group coordinator 192.168.155.45:9092 (id: 2147483647 rack: null) is unavailable or invalid due to cause: coordinator unavailable.isDisconnected: false. Rediscovery will be attempted. (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:904)
+[2021-08-05 21:59:41,439] INFO [Worker clientId=connect-1, groupId=connect-cluster] Discovered group coordinator 192.168.155.45:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-08-05 21:59:41,439] INFO [Worker clientId=connect-1, groupId=connect-cluster] Member connect-1-ac3cf22a-2335-40be-b45a-e814c1e6a23c sending LeaveGroup request to coordinator 192.168.155.45:9092 (id: 2147483647 rack: null) due to consumer poll timeout has expired. This means the time between subsequent calls to poll() was longer than the configured max.poll.interval.ms, which typically implies that the poll loop is spending too much time processing messages. You can address this either by increasing max.poll.interval.ms or by reducing the maximum size of batches returned in poll() with max.poll.records. (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:1029)
+[2021-08-05 21:59:41,439] INFO [Worker clientId=connect-1, groupId=connect-cluster] Rebalance started (org.apache.kafka.connect.runtime.distributed.WorkerCoordinator:225)
+[2021-08-05 21:59:41,440] INFO [Worker clientId=connect-1, groupId=connect-cluster] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-08-05 21:59:41,586] INFO [Worker clientId=connect-1, groupId=connect-cluster] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-08-05 21:59:41,587] INFO [Worker clientId=connect-1, groupId=connect-cluster] Successfully joined group with generation Generation{generationId=39, memberId='connect-1-0afd00cb-bccb-495e-ae14-1d31010749e3', protocol='sessioned'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-08-05 21:59:41,590] INFO [Worker clientId=connect-1, groupId=connect-cluster] Successfully synced group in generation Generation{generationId=39, memberId='connect-1-0afd00cb-bccb-495e-ae14-1d31010749e3', protocol='sessioned'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-08-05 21:59:41,590] INFO [Worker clientId=connect-1, groupId=connect-cluster] Joined group at generation 39 with protocol version 2 and got assignment: Assignment{error=0, leader='connect-1-0afd00cb-bccb-495e-ae14-1d31010749e3', leaderUrl='http://192.168.155.45:8083/', offset=102, connectorIds=[my-sink-connect, my-source-connect, my-sink-connect2], taskIds=[my-sink-connect-0, my-source-connect-0, my-sink-connect2-0], revokedConnectorIds=[], revokedTaskIds=[], delay=0} with rebalance delay: 0 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1689)
+[2021-08-05 21:59:41,590] INFO [Worker clientId=connect-1, groupId=connect-cluster] Starting connectors and tasks using config offset 102 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1216)
+[2021-08-05 21:59:41,590] INFO [Worker clientId=connect-1, groupId=connect-cluster] Starting connector my-sink-connect (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1299)
+[2021-08-05 21:59:41,591] INFO [Worker clientId=connect-1, groupId=connect-cluster] Starting task my-sink-connect-0 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1258)
+[2021-08-05 21:59:41,591] INFO [Worker clientId=connect-1, groupId=connect-cluster] Starting task my-source-connect-0 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1258)
+[2021-08-05 21:59:41,591] INFO [Worker clientId=connect-1, groupId=connect-cluster] Starting connector my-source-connect (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1299)
+[2021-08-05 21:59:41,591] INFO Creating task my-source-connect-0 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-08-05 21:59:41,590] INFO [Worker clientId=connect-1, groupId=connect-cluster] Starting connector my-sink-connect2 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1299)
+[2021-08-05 21:59:41,591] INFO Creating task my-sink-connect-0 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-08-05 21:59:41,591] INFO [Worker clientId=connect-1, groupId=connect-cluster] Starting task my-sink-connect2-0 (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1258)
+[2021-08-05 21:59:41,591] INFO Creating connector my-sink-connect2 of type org.apache.kafka.connect.file.FileStreamSinkConnector (org.apache.kafka.connect.runtime.Worker:274)
+[2021-08-05 21:59:41,591] INFO Creating connector my-source-connect of type io.confluent.connect.jdbc.JdbcSourceConnector (org.apache.kafka.connect.runtime.Worker:274)
+[2021-08-05 21:59:41,591] INFO Creating connector my-sink-connect of type io.confluent.connect.jdbc.JdbcSinkConnector (org.apache.kafka.connect.runtime.Worker:274)
+[2021-08-05 21:59:41,591] INFO Creating task my-sink-connect2-0 (org.apache.kafka.connect.runtime.Worker:509)
+[2021-08-05 21:59:41,592] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = org.apache.kafka.connect.file.FileStreamSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect2
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-08-05 21:59:41,592] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-08-05 21:59:41,592] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = org.apache.kafka.connect.file.FileStreamSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect2
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,592] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = org.apache.kafka.connect.file.FileStreamSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect2
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-08-05 21:59:41,592] INFO SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSourceConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-source-connect
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:361)
+[2021-08-05 21:59:41,592] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-08-05 21:59:41,592] INFO ConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSourceConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-source-connect
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig:361)
+[2021-08-05 21:59:41,593] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,593] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSourceConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-source-connect
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,592] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = org.apache.kafka.connect.file.FileStreamSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect2
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,592] INFO TaskConfig values: 
+	task.class = class org.apache.kafka.connect.file.FileStreamSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-08-05 21:59:41,592] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,593] INFO Instantiated task my-sink-connect2-0 with version 6.1.0-ccs of type org.apache.kafka.connect.file.FileStreamSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-08-05 21:59:41,593] INFO TaskConfig values: 
+	task.class = class io.confluent.connect.jdbc.sink.JdbcSinkTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-08-05 21:59:41,593] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSourceConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-source-connect
+	predicates = []
+	tasks.max = 1
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,594] INFO Instantiated task my-sink-connect-0 with version 10.2.1 of type io.confluent.connect.jdbc.sink.JdbcSinkTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-08-05 21:59:41,594] INFO Instantiated connector my-sink-connect2 with version 6.1.0-ccs of type class org.apache.kafka.connect.file.FileStreamSinkConnector (org.apache.kafka.connect.runtime.Worker:284)
+[2021-08-05 21:59:41,594] INFO Instantiated connector my-sink-connect with version 10.2.1 of type class io.confluent.connect.jdbc.JdbcSinkConnector (org.apache.kafka.connect.runtime.Worker:284)
+[2021-08-05 21:59:41,593] INFO Instantiated connector my-source-connect with version 10.2.1 of type class io.confluent.connect.jdbc.JdbcSourceConnector (org.apache.kafka.connect.runtime.Worker:284)
+[2021-08-05 21:59:41,594] INFO AbstractConfig values: 
+	file = /Users/kimdaeho/tttt/test.txt
+ (org.apache.kafka.common.config.AbstractConfig:361)
+[2021-08-05 21:59:41,594] INFO Finished creating connector my-sink-connect (org.apache.kafka.connect.runtime.Worker:310)
+[2021-08-05 21:59:41,594] INFO Finished creating connector my-sink-connect2 (org.apache.kafka.connect.runtime.Worker:310)
+[2021-08-05 21:59:41,594] INFO TaskConfig values: 
+	task.class = class io.confluent.connect.jdbc.source.JdbcSourceTask
+ (org.apache.kafka.connect.runtime.TaskConfig:361)
+[2021-08-05 21:59:41,594] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:361)
+[2021-08-05 21:59:41,594] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:361)
+[2021-08-05 21:59:41,595] INFO Set up the key converter class org.apache.kafka.connect.json.JsonConverter for task my-sink-connect-0 using the worker config (org.apache.kafka.connect.runtime.Worker:537)
+[2021-08-05 21:59:41,594] INFO Starting JDBC Source Connector (io.confluent.connect.jdbc.JdbcSourceConnector:69)
+[2021-08-05 21:59:41,594] INFO Finished creating connector my-source-connect (org.apache.kafka.connect.runtime.Worker:310)
+[2021-08-05 21:59:41,595] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:361)
+[2021-08-05 21:59:41,595] INFO Set up the key converter class org.apache.kafka.connect.json.JsonConverter for task my-sink-connect2-0 using the worker config (org.apache.kafka.connect.runtime.Worker:537)
+[2021-08-05 21:59:41,594] INFO Instantiated task my-source-connect-0 with version 10.2.1 of type io.confluent.connect.jdbc.source.JdbcSourceTask (org.apache.kafka.connect.runtime.Worker:524)
+[2021-08-05 21:59:41,595] INFO Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task my-sink-connect-0 using the worker config (org.apache.kafka.connect.runtime.Worker:543)
+[2021-08-05 21:59:41,595] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:361)
+[2021-08-05 21:59:41,595] INFO Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task my-sink-connect2-0 using the worker config (org.apache.kafka.connect.runtime.Worker:543)
+[2021-08-05 21:59:41,595] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task my-sink-connect-0 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-08-05 21:59:41,595] INFO JdbcSourceConnectorConfig values: 
+	batch.max.rows = 100
+	catalog.pattern = null
+	connection.attempts = 3
+	connection.backoff.ms = 10000
+	connection.password = [hidden]
+	connection.url = jdbc:mysql://localhost:3306/mydb
+	connection.user = root
+	db.timezone = UTC
+	dialect.name = 
+	incrementing.column.name = id
+	mode = incrementing
+	numeric.mapping = null
+	numeric.precision.mapping = false
+	poll.interval.ms = 5000
+	query = 
+	query.suffix = 
+	quote.sql.identifiers = ALWAYS
+	schema.pattern = null
+	table.blacklist = []
+	table.poll.interval.ms = 60000
+	table.types = [TABLE]
+	table.whitelist = [users]
+	timestamp.column.name = []
+	timestamp.delay.interval.ms = 0
+	timestamp.initial = null
+	topic.prefix = my_topic_
+	validate.non.null = true
+ (io.confluent.connect.jdbc.source.JdbcSourceConnectorConfig:361)
+[2021-08-05 21:59:41,595] INFO JsonConverterConfig values: 
+	converter.type = key
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:361)
+[2021-08-05 21:59:41,596] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task my-sink-connect2-0 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-08-05 21:59:41,596] INFO Set up the key converter class org.apache.kafka.connect.json.JsonConverter for task my-source-connect-0 using the worker config (org.apache.kafka.connect.runtime.Worker:537)
+[2021-08-05 21:59:41,596] INFO JsonConverterConfig values: 
+	converter.type = value
+	decimal.format = BASE64
+	schemas.cache.size = 1000
+	schemas.enable = true
+ (org.apache.kafka.connect.json.JsonConverterConfig:361)
+[2021-08-05 21:59:41,596] INFO Attempting to open connection #1 to MySql (io.confluent.connect.jdbc.util.CachedConnectionProvider:79)
+[2021-08-05 21:59:41,596] INFO Set up the value converter class org.apache.kafka.connect.json.JsonConverter for task my-source-connect-0 using the worker config (org.apache.kafka.connect.runtime.Worker:543)
+[2021-08-05 21:59:41,596] INFO Set up the header converter class org.apache.kafka.connect.storage.SimpleHeaderConverter for task my-source-connect-0 using the worker config (org.apache.kafka.connect.runtime.Worker:550)
+[2021-08-05 21:59:41,596] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-08-05 21:59:41,597] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-08-05 21:59:41,597] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:632)
+[2021-08-05 21:59:41,597] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,597] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = org.apache.kafka.connect.file.FileStreamSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect2
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-08-05 21:59:41,597] INFO SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSourceConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-source-connect
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:361)
+[2021-08-05 21:59:41,597] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = org.apache.kafka.connect.file.FileStreamSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect2
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,597] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSourceConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-source-connect
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:41,598] INFO Initializing: org.apache.kafka.connect.runtime.TransformationChain{} (org.apache.kafka.connect.runtime.Worker:606)
+[2021-08-05 21:59:41,598] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-my-sink-connect-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-my-sink-connect
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-08-05 21:59:41,598] INFO ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-consumer-my-sink-connect2-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = connect-my-sink-connect2
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
+ (org.apache.kafka.clients.consumer.ConsumerConfig:361)
+[2021-08-05 21:59:41,598] INFO ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = connector-producer-my-source-connect-0
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 2147483647
+	enable.idempotence = false
+	interceptor.classes = []
+	internal.auto.downgrade.txn.commit = false
+	key.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+	linger.ms = 0
+	max.block.ms = 9223372036854775807
+	max.in.flight.requests.per.connection = 1
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 2147483647
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 127000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
+ (org.apache.kafka.clients.producer.ProducerConfig:361)
+[2021-08-05 21:59:41,601] INFO Starting thread to monitor tables. (io.confluent.connect.jdbc.source.TableMonitorThread:73)
+[2021-08-05 21:59:41,609] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.producer.ProducerConfig:369)
+[2021-08-05 21:59:41,609] WARN The configuration 'metrics.context.connect.group.id' was supplied but isn't a known config. (org.apache.kafka.clients.producer.ProducerConfig:369)
+[2021-08-05 21:59:41,609] INFO Kafka version: 6.1.0-ccs (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-08-05 21:59:41,609] INFO Kafka commitId: 5496d92defc9bbe4 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-08-05 21:59:41,609] INFO Kafka startTimeMs: 1628168381609 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-08-05 21:59:41,609] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-08-05 21:59:41,610] WARN The configuration 'metrics.context.connect.group.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-08-05 21:59:41,610] INFO Kafka version: 6.1.0-ccs (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-08-05 21:59:41,610] INFO Kafka commitId: 5496d92defc9bbe4 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-08-05 21:59:41,610] INFO Kafka startTimeMs: 1628168381610 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-08-05 21:59:41,613] WARN The configuration 'metrics.context.connect.kafka.cluster.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-08-05 21:59:41,613] WARN The configuration 'metrics.context.connect.group.id' was supplied but isn't a known config. (org.apache.kafka.clients.consumer.ConsumerConfig:369)
+[2021-08-05 21:59:41,613] INFO Kafka version: 6.1.0-ccs (org.apache.kafka.common.utils.AppInfoParser:119)
+[2021-08-05 21:59:41,614] INFO Kafka commitId: 5496d92defc9bbe4 (org.apache.kafka.common.utils.AppInfoParser:120)
+[2021-08-05 21:59:41,614] INFO Kafka startTimeMs: 1628168381613 (org.apache.kafka.common.utils.AppInfoParser:121)
+[2021-08-05 21:59:41,613] INFO Starting JDBC source task (io.confluent.connect.jdbc.source.JdbcSourceTask:85)
+[2021-08-05 21:59:41,615] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Subscribed to topic(s): my_topic_users (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-08-05 21:59:41,615] INFO Starting JDBC Sink task (io.confluent.connect.jdbc.sink.JdbcSinkTask:48)
+[2021-08-05 21:59:41,615] INFO JdbcSourceTaskConfig values: 
+	batch.max.rows = 100
+	catalog.pattern = null
+	connection.attempts = 3
+	connection.backoff.ms = 10000
+	connection.password = [hidden]
+	connection.url = jdbc:mysql://localhost:3306/mydb
+	connection.user = root
+	db.timezone = UTC
+	dialect.name = 
+	incrementing.column.name = id
+	mode = incrementing
+	numeric.mapping = null
+	numeric.precision.mapping = false
+	poll.interval.ms = 5000
+	query = 
+	query.suffix = 
+	quote.sql.identifiers = ALWAYS
+	schema.pattern = null
+	table.blacklist = []
+	table.poll.interval.ms = 60000
+	table.types = [TABLE]
+	table.whitelist = [users]
+	tables = [`mydb`.`users`]
+	timestamp.column.name = []
+	timestamp.delay.interval.ms = 0
+	timestamp.initial = null
+	topic.prefix = my_topic_
+	validate.non.null = true
+ (io.confluent.connect.jdbc.source.JdbcSourceTaskConfig:361)
+[2021-08-05 21:59:41,615] INFO JdbcSinkConfig values: 
+	auto.create = true
+	auto.evolve = true
+	batch.size = 3000
+	connection.attempts = 3
+	connection.backoff.ms = 10000
+	connection.password = [hidden]
+	connection.url = jdbc:mysql://localhost:3306/mydb
+	connection.user = root
+	db.timezone = UTC
+	delete.enabled = false
+	dialect.name = 
+	fields.whitelist = []
+	insert.mode = insert
+	max.retries = 10
+	pk.fields = []
+	pk.mode = none
+	quote.sql.identifiers = ALWAYS
+	retry.backoff.ms = 3000
+	table.name.format = ${topic}
+	table.types = [TABLE]
+ (io.confluent.connect.jdbc.sink.JdbcSinkConfig:361)
+[2021-08-05 21:59:41,616] INFO Using JDBC dialect MySql (io.confluent.connect.jdbc.source.JdbcSourceTask:102)
+[2021-08-05 21:59:41,616] INFO [Worker clientId=connect-1, groupId=connect-cluster] Finished starting connectors and tasks (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1244)
+[2021-08-05 21:59:41,616] INFO Initializing writer using SQL dialect: MySqlDatabaseDialect (io.confluent.connect.jdbc.sink.JdbcSinkTask:67)
+[2021-08-05 21:59:41,616] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Subscribed to topic(s): my_topic_users (org.apache.kafka.clients.consumer.KafkaConsumer:961)
+[2021-08-05 21:59:41,616] INFO WorkerSinkTask{id=my-sink-connect-0} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-08-05 21:59:41,617] INFO [Producer clientId=connector-producer-my-source-connect-0] Cluster ID: PLXf_L_DSiicf9hO4OxYfA (org.apache.kafka.clients.Metadata:279)
+[2021-08-05 21:59:41,617] INFO WorkerSinkTask{id=my-sink-connect2-0} Sink task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSinkTask:309)
+[2021-08-05 21:59:41,620] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Cluster ID: PLXf_L_DSiicf9hO4OxYfA (org.apache.kafka.clients.Metadata:279)
+[2021-08-05 21:59:41,620] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Discovered group coordinator 192.168.155.45:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-08-05 21:59:41,620] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Cluster ID: PLXf_L_DSiicf9hO4OxYfA (org.apache.kafka.clients.Metadata:279)
+[2021-08-05 21:59:41,620] INFO [Worker clientId=connect-1, groupId=connect-cluster] Session key updated (org.apache.kafka.connect.runtime.distributed.DistributedHerder:1578)
+[2021-08-05 21:59:41,621] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Discovered group coordinator 192.168.155.45:9092 (id: 2147483647 rack: null) (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:847)
+[2021-08-05 21:59:41,621] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-08-05 21:59:41,621] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-08-05 21:59:41,623] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-08-05 21:59:41,623] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] (Re-)joining group (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:540)
+[2021-08-05 21:59:41,624] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Successfully joined group with generation Generation{generationId=3, memberId='connector-consumer-my-sink-connect-0-937b5c87-7ade-40c8-8bb4-361a9a00dbf1', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-08-05 21:59:41,624] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Successfully joined group with generation Generation{generationId=7, memberId='connector-consumer-my-sink-connect2-0-c31bbbcf-cb5d-4a51-bfca-739af5817996', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:596)
+[2021-08-05 21:59:41,625] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Finished assignment for group at generation 7: {connector-consumer-my-sink-connect2-0-c31bbbcf-cb5d-4a51-bfca-739af5817996=Assignment(partitions=[my_topic_users-0])} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:626)
+[2021-08-05 21:59:41,625] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Finished assignment for group at generation 3: {connector-consumer-my-sink-connect-0-937b5c87-7ade-40c8-8bb4-361a9a00dbf1=Assignment(partitions=[my_topic_users-0])} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:626)
+[2021-08-05 21:59:41,626] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Successfully synced group in generation Generation{generationId=3, memberId='connector-consumer-my-sink-connect-0-937b5c87-7ade-40c8-8bb4-361a9a00dbf1', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-08-05 21:59:41,626] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Successfully synced group in generation Generation{generationId=7, memberId='connector-consumer-my-sink-connect2-0-c31bbbcf-cb5d-4a51-bfca-739af5817996', protocol='range'} (org.apache.kafka.clients.consumer.internals.AbstractCoordinator:756)
+[2021-08-05 21:59:41,627] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Notifying assignor about the new Assignment(partitions=[my_topic_users-0]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-08-05 21:59:41,627] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Notifying assignor about the new Assignment(partitions=[my_topic_users-0]) (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:276)
+[2021-08-05 21:59:41,627] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Adding newly assigned partitions: my_topic_users-0 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-08-05 21:59:41,627] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Adding newly assigned partitions: my_topic_users-0 (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:288)
+[2021-08-05 21:59:41,628] INFO [Consumer clientId=connector-consumer-my-sink-connect2-0, groupId=connect-my-sink-connect2] Setting offset for partition my_topic_users-0 to the committed offset FetchPosition{offset=12, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.155.45:9092 (id: 0 rack: null)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:820)
+[2021-08-05 21:59:41,628] INFO [Consumer clientId=connector-consumer-my-sink-connect-0, groupId=connect-my-sink-connect] Setting offset for partition my_topic_users-0 to the committed offset FetchPosition{offset=12, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[192.168.155.45:9092 (id: 0 rack: null)], epoch=0}} (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:820)
+[2021-08-05 21:59:42,117] INFO Attempting to open connection #1 to MySql (io.confluent.connect.jdbc.util.CachedConnectionProvider:79)
+[2021-08-05 21:59:42,121] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-08-05 21:59:42,121] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:42,121] INFO Setting task configurations for 1 workers. (io.confluent.connect.jdbc.JdbcSinkConnector:44)
+[2021-08-05 21:59:42,122] INFO SinkConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = org.apache.kafka.connect.file.FileStreamSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect2
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SinkConnectorConfig:361)
+[2021-08-05 21:59:42,122] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = org.apache.kafka.connect.file.FileStreamSinkConnector
+	errors.deadletterqueue.context.headers.enable = false
+	errors.deadletterqueue.topic.name = 
+	errors.deadletterqueue.topic.replication.factor = 3
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-sink-connect2
+	predicates = []
+	tasks.max = 1
+	topics = [my_topic_users]
+	topics.regex = 
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:42,122] INFO SourceConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSourceConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-source-connect
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.SourceConnectorConfig:361)
+[2021-08-05 21:59:42,122] INFO EnrichedConnectorConfig values: 
+	config.action.reload = restart
+	connector.class = io.confluent.connect.jdbc.JdbcSourceConnector
+	errors.log.enable = false
+	errors.log.include.messages = false
+	errors.retry.delay.max.ms = 60000
+	errors.retry.timeout = 0
+	errors.tolerance = none
+	header.converter = null
+	key.converter = null
+	name = my-source-connect
+	predicates = []
+	tasks.max = 1
+	topic.creation.groups = []
+	transforms = []
+	value.converter = null
+ (org.apache.kafka.connect.runtime.ConnectorConfig$EnrichedConnectorConfig:361)
+[2021-08-05 21:59:42,140] INFO Found offset {{table=users}=null, {protocol=1, table=mydb.users}={incrementing=12}} for partition {protocol=1, table=mydb.users} (io.confluent.connect.jdbc.source.JdbcSourceTask:193)
+[2021-08-05 21:59:42,140] INFO Started JDBC source task (io.confluent.connect.jdbc.source.JdbcSourceTask:260)
+[2021-08-05 21:59:42,140] INFO WorkerSourceTask{id=my-source-connect-0} Source task finished initialization and start (org.apache.kafka.connect.runtime.WorkerSourceTask:233)
+[2021-08-05 21:59:42,140] INFO Begin using SQL query: SELECT * FROM `mydb`.`users` WHERE `mydb`.`users`.`id` > ? ORDER BY `mydb`.`users`.`id` ASC (io.confluent.connect.jdbc.source.TableQuerier:164)
+[2021-08-05 21:59:51,618] INFO WorkerSourceTask{id=my-source-connect-0} Committing offsets (org.apache.kafka.connect.runtime.WorkerSourceTask:478)
+[2021-08-05 21:59:51,618] INFO WorkerSourceTask{id=my-source-connect-0} flushing 0 outstanding messages for offset commit (org.apache.kafka.connect.runtime.WorkerSourceTask:495)

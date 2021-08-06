@@ -1,0 +1,6 @@
+encrypt:
+  key-store:
+    location: file://${user.home}/study/MSA/keystore/apiEncryptionKey.jks
+    password: eoghdml1
+    alias: apiEncryptionKey
+#  key: daehokim90
